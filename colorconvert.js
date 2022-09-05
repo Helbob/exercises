@@ -11,9 +11,10 @@ convert();
 */
 let testo = 255;
 let hexString = "bada55";
-let [r, g, b] = hexString.substring(0, parseInt(hexString, 16));
+let [r, g, b] = hexString.substring(0, 2);
 
 convert(r, g, b);
 function convert() {
-  console.log(r, g, b);
+  r = parseInt(hexString, 16);
+  console.log(r);
 }
