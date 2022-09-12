@@ -52,3 +52,31 @@ function sortList(listToSort, dir) {
 //console.log("Before sort:", animals);
 //animals.sort(compareName);
 //console.log("After sort:", animals);
+
+function filterList(filteredList, filterBy) {
+  return filteredList.filter((animal) => aniaml.type === filterBy);
+}
+// idfk filter + sort??
+function sortList(listToSort, dir) {
+  let sortDir;
+  if (dir === "asc") {
+    sortDir = 1;
+  } else {
+    sortDir = -1;
+  }
+  listToSort = listToSort.sort(compareName);
+
+  function compareName(a, b) {
+    if (a.name < b.name) {
+      return -1 * sortDir;
+    } else {
+      return 1 * sortDir;
+    }
+  }
+  return listToSort;
+}
+
+const filteredList = filterList(animals, "dog");
+const filteredListAndSortedList = (filterList, "name");
+
+console.log("filteredList", filteredListAndSortedList);
